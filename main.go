@@ -203,7 +203,7 @@ func ListHandler(c *gin.Context) {
 }
 
 func main() {
-	port := ":" + "30120"
+	port := ":" + 30120
 	router := gin.Default()
 
 	router.Use(secure.New(secure.Config{
