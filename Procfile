@@ -1,2 +1,2 @@
 web: GIN_MODE=release npqueue
-release: ./release.sh
+release: chmod u+x release.sh && ./release.sh
