@@ -5,7 +5,7 @@ COPY . /src
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o npqueue .
 RUN go build -v .
-
+RUN cp ./bin/npqueue ./npqueue
 
 # ---
 
