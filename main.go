@@ -52,7 +52,7 @@ type NoPixelPlayer struct {
 var (
 	jsonGet = &http.Client{Timeout: 10 * time.Second}
 	// Using an environment variable to protect IP
-	ServerAddress = os.Getenv("40.160.10.151")
+	ServerAddress = "40.160.10.151:30120"
 	// ServerDetails struct to hold PlayerList & ServerDetails struct
 	ServerDetails = &ServerDetailsStruct{}
 	// NoPixelData struct
@@ -62,7 +62,7 @@ var (
 // getPlayerList sends HTTP get request to get list of players from /players.json
 func getPlayerList() (err error) {
 	server := strings.Builder{}
-	fmt.Fprintf(&server, "40.160.10.151:30120/players.json", ServerAddress)
+	fmt.Fprintf(&server, "http://%s/players.json", ServerAddress)
 
 	req, err := jsonGet.Get(server.String())
 	if err != nil {
