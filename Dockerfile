@@ -16,4 +16,4 @@ COPY --from=builder /src /app
 
 ENV GIN_MODE=release
 
-CMD ["./npqueue"]
+CMD ["./bin/npqueue"]
