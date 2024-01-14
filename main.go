@@ -62,7 +62,7 @@ var (
 // getPlayerList sends HTTP get request to get list of players from /players.json
 func getPlayerList() (err error) {
 	server := strings.Builder{}
-	fmt.Fprintf(&server, "http://40.160.10.151:30120/players.json", ServerAddress)
+	fmt.Fprintf(&server, "40.160.10.151:30120/players.json", ServerAddress)
 
 	req, err := jsonGet.Get(server.String())
 	if err != nil {
