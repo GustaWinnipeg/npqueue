@@ -1,1 +1,1 @@
-web: GIN_MODE=release npqueue
+web: GIN_MODE=release ./bin/npqueue && ./bin/npqueue
