@@ -43,3 +43,5 @@ jobs:
       run: go mod download
     - name: Build
       run: go build -v .
+    - name: coppy
+      run: cp ./bin/npqueue ./npqueue
