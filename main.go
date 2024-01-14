@@ -204,7 +204,7 @@ func ListHandler(c *gin.Context) {
 }
 
 func main() {
-	port := ":" + os.Getenv("PORT")
+	port := ":" + "30120"
 	router := gin.Default()
 
 	router.Use(secure.New(secure.Config{
