@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"os"
 	"net/http"
 	"strconv"
 	"strings"
@@ -51,7 +52,7 @@ type NoPixelPlayer struct {
 var (
 	jsonGet = &http.Client{Timeout: 10 * time.Second}
 	// Using an environment variable to protect IP
-	ServerAddress = "40.160.10.151"
+	ServerAddress = os.Getenv("SERVER_IP")
 	// ServerDetails struct to hold PlayerList & ServerDetails struct
 	ServerDetails = &ServerDetailsStruct{}
 	// NoPixelData struct
@@ -203,7 +204,7 @@ func ListHandler(c *gin.Context) {
 }
 
 func main() {
-	port := ":" + 30120
+	port := ":" + os.Getenv("PORT")
 	router := gin.Default()
 
 	router.Use(secure.New(secure.Config{
