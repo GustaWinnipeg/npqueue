@@ -1,4 +1,4 @@
-module github.com/jakejarvis/npqueue
+module github.com/GustaWinnipeg/npqueue
 
 go 1.13
 
