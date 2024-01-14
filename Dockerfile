@@ -4,6 +4,8 @@ WORKDIR /src
 COPY . /src
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o npqueue .
+RUN go build -v .
+
 
 # ---
 
