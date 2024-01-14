@@ -51,7 +51,7 @@ type NoPixelPlayer struct {
 var (
 	jsonGet = &http.Client{Timeout: 10 * time.Second}
 	// Using an environment variable to protect IP
-	ServerAddress = "40.160.10.151:30120"
+	ServerAddress = "40.160.10.151"
 	// ServerDetails struct to hold PlayerList & ServerDetails struct
 	ServerDetails = &ServerDetailsStruct{}
 	// NoPixelData struct
